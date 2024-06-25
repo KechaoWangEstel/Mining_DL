@@ -15,7 +15,7 @@ class PointsDataset(Dataset):
         self.features = features
         self.label = label
         self.data = torch.tensor(df[features].values, dtype=torch.float32)
-        self.labels = torch.tensor(df[label].values, dtype=torch.long)
+        self.labels = torch.tensor(df[label].values, dtype=torch.float32)
 
     def __len__(self):
         return len(self.data)
