@@ -11,7 +11,7 @@ device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 # 准备数据集
 test_rate = 0.2
-train_data,test_data = create_data_fun('normalized.csv',test_rate)
+train_data,test_data = create_data_fun('data/normalized.csv',test_rate)
 # 获得数据集的长度 len(), 即length
 train_data_size = len(train_data)
 test_data_size = len(test_data)

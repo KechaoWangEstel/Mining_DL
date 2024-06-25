@@ -49,7 +49,7 @@ def create_data_fun(file_name,test_rate):
 
 
 if __name__ =='__main__':
-    train_dataset,test_dataset = create_data_fun('normalized.csv',0.2)
+    train_dataset,test_dataset = create_data_fun('data/normalized.csv',0.2)
     # 创建DataLoader来批量加载数据
     train_loader = DataLoader(train_dataset, batch_size=32, shuffle=True)
     test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False)
