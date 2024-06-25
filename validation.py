@@ -7,7 +7,7 @@ from model import ANN_relu_2
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 # 步骤1: 读取CSV文件
-df = pd.read_csv('normalized.csv')
+df = pd.read_csv('data/normalized.csv')
 
 # 步骤2: 数据预处理
 # 假设特征列不需要预处理，或者已经预处理完毕
@@ -19,7 +19,7 @@ X_tensor = torch.tensor(X, dtype=torch.float32)
 y_tensor = torch.tensor(y, dtype=torch.long)  # 标签数据类型转换
 
 # 步骤4: 加载模型
-model = torch.load('model/model_best_0.672_50_1024_class1.pth')  # 替换为你的模型文件路径
+model = torch.load('model/model_best_0.672_50_1024.pth')  # 替换为你的模型文件路径
 model = model.to(device)
 model.eval()  # 设置为评估模式
 

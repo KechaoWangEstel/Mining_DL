@@ -5,3 +5,4 @@ __pycache__/
 *$py.class
 events.out.tfevents.*
 *.pth
+*.csv
