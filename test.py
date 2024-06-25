@@ -39,4 +39,5 @@ with torch.no_grad():
         predictions.extend(pred.view(-1).tolist())  # 将预测结果添加到列表
 df['possibilities'] = output_list
 df['prediction'] = predictions
+print(predictions)
 df.to_csv('data/predict_result.csv', index=False, encoding='utf-8-sig')
