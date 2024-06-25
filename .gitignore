@@ -1,0 +1,6 @@
+# 文件名称 .gitignore
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+events.out.tfevents.*
