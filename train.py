@@ -60,6 +60,7 @@ for i in range(epoch):
     for data in train_dataloader:
         params, labels = data
         params = params.to(device)
+        
         labels = labels.to(device)
         outputs = model(params).reshape(-1)              # 将训练的数据放入
         loss = loss_fn(outputs, labels)    # 得到损失值
@@ -81,7 +82,7 @@ for i in range(epoch):
     # 我们可以在每次训练完一轮后，进行一次测试，在测试数据集上跑一遍，以测试数据集上的损失或正确率评估我们的模型有没有训练好
 
     # 顾名思义，下面的代码没有梯度，即我们不会利用进行调优                                   # 准确率
-    threshold = 0.6             #阈值threshold
+    threshold = 0.5             #阈值threshold
     predictions = []
     output_list=[]
     true_labels = []
