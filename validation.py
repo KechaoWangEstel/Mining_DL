@@ -22,7 +22,7 @@ def get_validation(threshold,model,device):
             true_labels.extend(labels.tolist())  # 将真实标签添加到列表
             output_list.extend(outputs.view(-1).tolist())
     return true_labels,predictions,output_list
-
+ 
 
 # 步骤1: 读取CSV文件
 df = pd.read_csv('data/normalized.csv')
